@@ -3,8 +3,10 @@ DRPose is developed on Ubuntu 18.04 OS, 3090 Ti GPU (CUDA 11.3).
 To reproduce our results:
 
 1. Create conda environment
+'''bash
 conda create -n DRPose python=3.6
 conda activate DRPose
+'''
 
 2. Install basic packages
 cd DRPose
