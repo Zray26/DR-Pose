@@ -24,7 +24,13 @@ pip install torch==1.10.1+cu113 torchvision==0.11.2+cu113 torchaudio==0.10.1 -f 
 bash installer.sh
 ```
 
-5. Download weights and extract under /DRPose/weights folder. The architecture should be:
+
+5. Download weights and test dataset from anonymous link: 
+
+https://drive.google.com/drive/folders/1DQ0GDCEBgRXH-_yebx31ez5_Doatf9du?usp=sharing
+
+Extract weights.zip under /DRPose/weights folder. 
+The architecture should be:
 ```
 |DRPose
  -|weights
@@ -32,8 +38,8 @@ bash installer.sh
  ---|deformation
  ---|completion
 ```
-
-6. Download dataset and extract to /DRPose/dataset folder. The architecture should be:
+Extract NOCS.zip under /DRPose/dataset/NOCS folder.
+The architecture should be:
 ```
 |DRPose
  -|dataset
@@ -45,12 +51,12 @@ bash installer.sh
  -----|results
 ```
 
-7. For evaluaiton on CAMERA25 dataset:
+6. For evaluaiton on CAMERA25 dataset:
 ```bash
 python evaluate.py --dataset=camera_val
 ```
 
-8. For evaluation on REAL275 dataset:
+7. For evaluation on REAL275 dataset:
 ```bash
 python evaluate.py --dataset=real_test
 ```
