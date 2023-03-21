@@ -25,13 +25,16 @@ bash installer.sh
 ```
 
 5. Download weights and extract under /DRPose/weights folder. The architecture should be:
+```
 |DRPose
  -|weights
  ---|registration
  ---|deformation
  ---|completion
+```
 
 6. Download dataset and extract to /DRPose/dataset folder. The architecture should be:
+```
 |DRPose
  -|dataset
  ---|NOCS
@@ -40,6 +43,7 @@ bash installer.sh
  -----|obj_models
  -----|Real
  -----|results
+```
 
 7. For evaluaiton on CAMERA25 dataset:
 ```bash
