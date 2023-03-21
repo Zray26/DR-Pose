@@ -3,14 +3,16 @@ DRPose is developed on Ubuntu 18.04 OS, 3090 Ti GPU (CUDA 11.3).
 To reproduce our results:
 
 1. Create conda environment
-'''bash
+```bash
 conda create -n DRPose python=3.6
 conda activate DRPose
-'''
+```
 
 2. Install basic packages
+```bash
 cd DRPose
-pip install -r requirements.txt 
+pip install -r requirements.txt
+```
 
 3. install PyTorch + CUDA
 pip install torch==1.10.1+cu113 torchvision==0.11.2+cu113 torchaudio==0.10.1 -f https://download.pytorch.org/whl/cu113/torch_stable.html
