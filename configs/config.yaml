@@ -1,0 +1,44 @@
+entangled: &entangled True
+
+# kpfcn backbone
+kpfcn_config:
+  num_layers: 4
+  in_points_dim: 3
+  first_feats_dim: 256
+  final_feats_dim: 32
+  first_subsampling_dl: 0.005
+  in_feats_dim: 1
+  conv_radius: 2.5
+  deform_radius: 5.0
+  num_kernel_points: 15
+  KP_extent: 2.0
+  KP_influence: linear
+  aggregation_mode: sum
+  fixed_kernel_points: center
+  use_batch_norm: True
+  batch_norm_momentum: 0.02
+  deformable: False
+  modulated: False
+  add_cross_score: True
+  condition_feature: True
+  coarse_feature_dim: &coarse_feature_dim 528 
+  fine_feature_dim:  264
+  coarse_match_radius: 0.024 
+  coarse_level: -2
+#  fine_match_radius: 0.0375
+
+
+
+
+coarse_transformer:
+  feature_dim: *coarse_feature_dim
+  n_head: 4
+  layer_types: ['self', 'cross']
+  positioning_type: &positioning_type 'procrustes' # options: [ 'randSO3' , 'procrustes', 'oracle']
+  pe_type: &pe_type "sinusoidal" # options: [ 'rotary', 'sinusoidal']
+  entangled: *entangled
+  vol_bnds: [ [ -1.7, -1.8,  0.25], [ 1.55, 0.5, 5.3 ]]
+  voxel_size: &voxel_size 0.01
+
+
+
